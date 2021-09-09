@@ -16,7 +16,8 @@ module.exports = {
         },
         {
             test: /\.js$/,
-            loader: 'babel-loader'
+            loader: 'babel-loader',
+            include:[path.resolve(__dirname, 'src')]
         },
         {
             test: /\.css$/,
@@ -30,7 +31,12 @@ module.exports = {
       filename: 'index.html',
       template: 'index.html'
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  }
 };
 
 
