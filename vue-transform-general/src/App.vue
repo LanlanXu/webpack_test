@@ -41,6 +41,6 @@ export default {
 
 <style scoped>
 div{
-    color: #fff;
+    color: red;
 }
 </style>

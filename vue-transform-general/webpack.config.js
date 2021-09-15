@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
@@ -12,7 +13,10 @@ module.exports = {
     rules: [
         {
             test: /\.vue$/,
-            loader: 'vue-loader'
+            loader: 'vue-loader',
+            options: {
+              extractCSS: true
+            }
         },
         {
             test: /\.js$/,
@@ -30,7 +34,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html'
-    })
+    }),
+    new ExtractTextPlugin('style.css')
   ],
   resolve: {
     alias: {
