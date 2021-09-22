@@ -13,19 +13,32 @@ module.exports = {
     rules: [
         {
             test: /\.vue$/,
-            loader: 'vue-loader',
-            options: {
-              extractCSS: true
-            }
+            use: [
+              {
+                loader: 'vue-loader',
+                options: {
+                  extractCSS: true
+                }
+              }
+            ]
+            // loaders: ['vue-loader', {
+            //   css: ExtractTextPlugin.extract({
+            //     use: 'css-loader',
+            //     fallback: 'vue-style-loader' // <- 这是vue-loader的依赖，所以如果使用npm3，则不需要显式安装
+            //   })
+            // }]
         },
         {
             test: /\.js$/,
-            loader: 'babel-loader',
+            use: 'babel-loader',
             include:[path.resolve(__dirname, 'src')]
         },
         {
             test: /\.css$/,
-            loader: 'css-loader'
+            use: [
+              'style-loader'
+              // 'css-loader'
+            ]
         }
     ]
   },
