@@ -3,7 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
-  mode: 'production',
+  // mode: 'production', // webpack3及以下不支持此属性
   entry: './src/index.js',
   output: {
     filename: 'index.js',
@@ -15,18 +15,9 @@ module.exports = {
             test: /\.vue$/,
             use: [
               {
-                loader: 'vue-loader',
-                options: {
-                  extractCSS: true
-                }
+                loader: 'vue-loader'
               }
             ]
-            // loaders: ['vue-loader', {
-            //   css: ExtractTextPlugin.extract({
-            //     use: 'css-loader',
-            //     fallback: 'vue-style-loader' // <- 这是vue-loader的依赖，所以如果使用npm3，则不需要显式安装
-            //   })
-            // }]
         },
         {
             test: /\.js$/,
@@ -35,10 +26,14 @@ module.exports = {
         },
         {
             test: /\.css$/,
-            use: [
-              'style-loader'
-              // 'css-loader'
-            ]
+            use: ExtractTextPlugin.extract({ // 使用这个完成了样式抽离
+              fallback: "style-loader",
+              use: "css-loader"
+            }),
+            // use: [ 用这个不用上面的ExtractTextPlugin的话，抽离出来的样式会作为style标签直接插到页面上
+            //   'style-loader',
+            //   'css-loader'
+            // ]
         }
     ]
   },
