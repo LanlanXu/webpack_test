@@ -6,8 +6,10 @@ module.exports = {
   // mode: 'production', // webpack3及以下不支持此属性
   entry: './src/index.js',
   output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'static/js/index-[id].js', // 入口页面
+    path: path.resolve(__dirname, 'dist'), // 编译后的文件放的路径
+    publicPath: './', // 页面引入
+    // chunkFilename: 'static/js/[name].[chunkhash].js'
   },
   module: {
     rules: [
@@ -28,12 +30,25 @@ module.exports = {
             test: /\.css$/,
             use: ExtractTextPlugin.extract({ // 使用这个完成了样式抽离
               fallback: "style-loader",
+              publicPath:'../../',
               use: "css-loader"
             }),
             // use: [ 用这个不用上面的ExtractTextPlugin的话，抽离出来的样式会作为style标签直接插到页面上
             //   'style-loader',
             //   'css-loader'
             // ]
+        },
+        {
+          test: /\.(png|jpg|gif)$/i,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 1192,
+                name: 'static/images/[name].[hash:7].[ext]'
+              },
+            },
+          ]
         }
     ]
   },
@@ -43,7 +58,9 @@ module.exports = {
       filename: 'index.html',
       template: 'index.html'
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin({
+      filename: 'static/styles/[name].[contenthash].css',
+    })
   ],
   resolve: {
     alias: {

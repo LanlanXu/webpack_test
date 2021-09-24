@@ -42,5 +42,7 @@ export default {
 <style scoped>
 div{
     color: red;
+    background: url(./no_auth.png) no-repeat;
+    background-size: cover;
 }
 </style>
