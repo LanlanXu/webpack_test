@@ -2,6 +2,8 @@
 
 var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
 
+require("core-js/modules/es.function.name.js");
+
 var _includes = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/includes"));
 
 var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
@@ -24,10 +26,10 @@ var pos = new _promise.default();
 }, {
   b: 2
 });
-var _n$age = {
-  n: 'xll',
+var _name$age = {
+  name: 'xll',
   age: 21
 },
-    n = _n$age.n,
-    age = _n$age.age;
-var name = 1;
+    name = _name$age.name,
+    age = _name$age.age;
+var name1 = 1;

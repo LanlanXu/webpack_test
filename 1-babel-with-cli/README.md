@@ -1,6 +1,6 @@
 ### es6+->es5 属于【编译】
 利用cli命令行工具，依赖：
-+ @babel/cli
++ @babel/cli （是babel的命令行集合，使用时仍然需要@babel/core的方法）
 @babel/core
 @babel/preset-env
 

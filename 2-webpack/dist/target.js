@@ -2037,6 +2037,36 @@ addToUnscopables('includes');
 
 /***/ }),
 
+/***/ 8309:
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+var DESCRIPTORS = __webpack_require__(9781);
+var defineProperty = __webpack_require__(3070).f;
+
+var FunctionPrototype = Function.prototype;
+var FunctionPrototypeToString = FunctionPrototype.toString;
+var nameRE = /^\s*function ([^ (]*)/;
+var NAME = 'name';
+// Function instances `.name` property
+// https://tc39.es/ecma262/#sec-function-instances-name
+if (DESCRIPTORS && !(NAME in FunctionPrototype)) {
+  defineProperty(FunctionPrototype, NAME, {
+    configurable: true,
+    get: function () {
+      try {
+        console.log('22')
+        return FunctionPrototypeToString.call(this).match(nameRE)[1];
+      } catch (error) {
+        console.log(error)
+        return '';
+      }
+    }
+  });
+}
+
+
+/***/ }),
+
 /***/ 9601:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
@@ -2524,6 +2554,8 @@ __webpack_require__(8674);
 
 __webpack_require__(9601);
 
+__webpack_require__(8309);
+
 var a = 1;
 
 if ([1, 2, 3].includes(2)) {
@@ -2532,19 +2564,19 @@ if ([1, 2, 3].includes(2)) {
 
 var func = function func() {};
 
-var pos = new Promise();
+var pos = new Promise(function () {});
 Object.assign({
   a: 1
 }, {
   b: 2
 });
-var _n$age = {
-  n: 'xll',
+var _name$age = {
+  name: 'xll',
   age: 21
 },
-    n = _n$age.n,
-    age = _n$age.age;
-var name = 1;
+    name = _name$age.name,
+    age = _name$age.age;
+var name1 = 1;
 }();
 /******/ })()
 ;

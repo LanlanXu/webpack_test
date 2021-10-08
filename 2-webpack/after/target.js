@@ -8,6 +8,8 @@ require("core-js/modules/es.promise.js");
 
 require("core-js/modules/es.object.assign.js");
 
+require("core-js/modules/es.function.name.js");
+
 var a = 1;
 
 if ([1, 2, 3].includes(2)) {
@@ -16,16 +18,16 @@ if ([1, 2, 3].includes(2)) {
 
 var func = function func() {};
 
-var pos = new Promise();
+var pos = new Promise(function () {});
 Object.assign({
   a: 1
 }, {
   b: 2
 });
-var _n$age = {
-  n: 'xll',
+var _name$age = {
+  name: 'xll',
   age: 21
 },
-    n = _n$age.n,
-    age = _n$age.age;
-var name = 1;
+    name = _name$age.name,
+    age = _name$age.age;
+var name1 = 1;
