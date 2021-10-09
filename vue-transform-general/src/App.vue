@@ -17,7 +17,7 @@
 <script>
 export default {
   data(){
-    let a = 'cllllllwe133';
+    let a = 'cllllllwe133222';
     return {
       name: '默认',
       a: a,
