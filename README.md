@@ -1,2 +1,3 @@
 # webpack_TS
-加入husky进行提交前进行格式化校验。
+husky是提供git提交的钩子。
+commitlint是对提交信息进行格式化检查。
