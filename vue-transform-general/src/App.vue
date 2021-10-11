@@ -17,26 +17,26 @@
 <script>
 export default {
   data(){
-    let a = 'cllllllwe133222';
+    let a = "cllllllwe133222"
     return {
-      name: '默认',
+      name: "默认",
       a: a,
       list: [
         {
-          name: 'xll'
+          name: "xll"
         },
         {
-          name: 'cl'
+          name: "cl"
         }
       ]
-    }
+    };
   },
   methods: {
     getName(){
-      console.log(3)
+      console.log(3);
     }
   }
-}
+};
 </script>
 
 <style scoped>

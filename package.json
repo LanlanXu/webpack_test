@@ -1,8 +1,11 @@
 {
   "scripts": {
+    "lint": "eslint --ext .vue vue-transform-general/src --fix",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^7.19.1",
     "husky": "^7.0.2"
   }
 }
