@@ -5,10 +5,10 @@
 -->
 <template>
   <div id="app">
-    <h1>{{name}}</h1>
+    <h1>{{ name }}</h1>
     <ul>
       <li v-for="(item, index) in list" :key="index" @click="name = item.name">
-        {{item.name}}
+        {{ item.name }}
       </li>
     </ul>
   </div>
@@ -16,33 +16,33 @@
 
 <script>
 export default {
-  data(){
+  data() {
     let a = "cllllllwe133222";
     return {
       name: "默认",
       a: a,
       list: [
         {
-          name: "xll"
+          name: "xll",
         },
         {
-          name: "cl"
-        }
-      ]
+          name: "cl",
+        },
+      ],
     };
   },
   methods: {
-    getName(){
+    getName() {
       console.log(3);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
-div{
-    color: red;
-    background: url(./no_auth.png) no-repeat;
-    background-size: cover;
+div {
+  color: red;
+  background: url(./no_auth.png) no-repeat;
+  background-size: cover;
 }
 </style>
