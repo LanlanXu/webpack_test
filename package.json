@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "lint": "eslint --ext .vue vue-transform-general/src --fix",
     "prepare": "husky install"
   },
   "devDependencies": {
