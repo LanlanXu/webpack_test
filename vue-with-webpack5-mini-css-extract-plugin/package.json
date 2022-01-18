@@ -1,0 +1,32 @@
+{
+  "name": "vue-with-webpack-dev-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node build/dev-server.js",
+    "build": "node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "2.6.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "core-js": "3",
+    "css-loader": "0.28.11",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.5.2",
+    "rimraf": "^3.0.2",
+    "style-loader": "0.23.1",
+    "url-loader": "^4.1.1",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.66.0"
+  }
+}
