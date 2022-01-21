@@ -19,11 +19,11 @@ export default {
   data(){
     let a = "cllllllwe133222";
     return {
-      name: "默认",
+      name: "默认11",
       a: a,
       list: [
         {
-          name: "xll"
+          name: "xll11"
         },
         {
           name: "cl"
@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
 div{
-    color: red;
+    color: green;
     background: url(./no_auth.png) no-repeat;
     background-size: cover;
 }
