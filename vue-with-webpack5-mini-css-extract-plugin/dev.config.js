@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: 'static/js/index.[id].js', // 入口页面
     path: path.resolve(__dirname, 'dist'), // 编译后的文件放的路径
-    publicPath: './' //  编译后的文件页面中引用的时候，会拼上啥路径，比如说
+    publicPath: '/' //  编译后的文件页面中引用的时候，会拼上啥路径，比如说
   },
   module: {
     rules: [
