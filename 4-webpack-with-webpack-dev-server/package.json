@@ -1,0 +1,17 @@
+{
+  "name": "4-webpack-with-webpack-dev-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "4.5.2",
+    "webpack": "4.46.0",
+    "webpack-dev-server": "^4.8.1"
+  }
+}
