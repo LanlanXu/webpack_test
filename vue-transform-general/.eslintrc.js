@@ -6,16 +6,14 @@ module.exports = {
     "extends": [
         "eslint:recommended",
         "plugin:vue/essential"
+        // "plugin:vue/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": [
-        "vue"
-    ],
+    "plugins": ["prettier"],
     "rules": {
-        "semi": [1, "always"],
-        "quotes": ["error", "double"]
+        "prettier/prettier": 1
     }
 };

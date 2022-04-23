@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+#npm run lint
+
+# 可以设置钩子，在提交前用eslint检查格式
