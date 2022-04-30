@@ -1,5 +1,5 @@
 {
-  "name": "vue-with-webpack-dev-server",
+  "name": "vue-with-webpack5-mini-css-extract-plugin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
