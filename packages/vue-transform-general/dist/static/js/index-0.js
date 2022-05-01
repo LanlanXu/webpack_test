@@ -312,14 +312,14 @@ process.umask = function() { return 0; };
 //
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
-    var a = 'cllllll';
+    var a = "cllllllwe133222";
     return {
-      name: '默认',
+      name: "默认",
       a: a,
       list: [{
-        name: 'xll'
+        name: "xll"
       }, {
-        name: 'cl'
+        name: "cl"
       }]
     };
   },
@@ -341,11 +341,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 var vue = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
-  el: '#app',
+  el: "#app",
   components: {
     App: __WEBPACK_IMPORTED_MODULE_1__App_vue__["a" /* default */]
   },
-  template: '<App />'
+  template: "<App />"
 });
 console.log(vue);
 
@@ -12693,7 +12693,7 @@ var component = Object(__WEBPACK_IMPORTED_MODULE_3__node_modules_vue_loader_lib_
 
 /* hot reload */
 if (false) {
-  var api = require("D:\\xulanlan\\PRATICE\\code\\webpack_ts\\vue-transform-general\\node_modules\\vue-hot-reload-api\\dist\\index.js")
+  var api = require("F:\\xulanlan\\git\\webpack_test\\node_modules\\vue-hot-reload-api\\dist\\index.js")
   api.install(require('vue'))
   if (api.compatible) {
     module.hot.accept()
@@ -12730,7 +12730,7 @@ component.options.__file = "src/App.vue"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return staticRenderFns; });
-var render = function() {
+var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -12739,22 +12739,22 @@ var render = function() {
     _vm._v(" "),
     _c(
       "ul",
-      _vm._l(_vm.list, function(item, index) {
+      _vm._l(_vm.list, function (item, index) {
         return _c(
           "li",
           {
             key: index,
             on: {
-              click: function($event) {
+              click: function ($event) {
                 _vm.name = item.name
-              }
-            }
+              },
+            },
           },
           [_vm._v("\n      " + _vm._s(item.name) + "\n    ")]
         )
       }),
       0
-    )
+    ),
   ])
 }
 var staticRenderFns = []
