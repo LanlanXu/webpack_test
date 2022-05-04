@@ -2,7 +2,8 @@
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "yarn workspace vue-with-webpack-dev-server-webpack4 run dev"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
